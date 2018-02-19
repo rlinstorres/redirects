@@ -23,6 +23,7 @@ env:
   - KITCHEN_YAML=.kitchen.yml
   - KITCHEN_LOCAL_YAML=.kitchen.dokken.yml
   matrix:
+  - INSTANCE=default-ubuntu-1404
   - INSTANCE=default-ubuntu-1604
 
 before_script:
