@@ -18,9 +18,9 @@ describe command('sudo /etc/init.d/apache2 status') do
 end
 
 describe command('ls -la /etc/apache2/sites-enabled/') do
-  its(:stdout) { should match (/.conf/) }
+  its(:stdout) { should match /.conf/ }
 end
 
 describe command('ls -la /etc/apache2/sites-available/') do
-  its(:stdout) { should match (/.conf/) }
+  its(:stdout) { should match /.conf/ }
 end
