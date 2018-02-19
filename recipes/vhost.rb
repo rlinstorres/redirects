@@ -19,9 +19,6 @@
 data_bag = node['redirects']['data_bag']['name']
 tag = node['redirects']['data_bag']['tag']
 
-#require 'pry'
-#binding.pry
-
 search(data_bag, "tag:#{tag}") do |bag|
   bag[node.chef_environment].each do |site, config|
     directory config['docroot'] do
