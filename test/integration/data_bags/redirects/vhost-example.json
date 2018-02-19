@@ -1,0 +1,15 @@
+{
+  "id": "vhost-example",
+  "_default": {
+    "example.com": {
+      "docroot": "/var/www/html",
+      "log_level": "warn",
+      "server_admin": "email@example.com",
+      "server_alias": "www.example.com",
+      "redir": [
+        "RedirectMatch 301 /(.*) http://other-example.com/"
+      ]
+    }
+  },
+  "tag": "redirects"
+}

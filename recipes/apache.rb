@@ -1,6 +1,6 @@
 #
 # Cookbook:: redirects
-# Recipe:: default
+# Recipe:: apache
 #
 # Copyright:: 2018, Rodrigo Torres <rlinstorres@gmail.com>
 #
@@ -16,4 +16,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include_recipe 'redirects::apache'
+node.normal['apache']['mpm'] = 'prefork'
+include_recipe 'apache2'
+include_recipe 'apache2::mod_rewrite'
+
+include_recipe 'redirects::vhost'

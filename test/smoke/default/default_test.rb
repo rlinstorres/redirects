@@ -5,14 +5,22 @@
 # The Inspec reference, with examples and extensive documentation, can be
 # found at http://inspec.io/docs/reference/resources/
 
-unless os.windows?
-  # This is an example test, replace with your own test.
-  describe user('root'), :skip do
-    it { should exist }
-  end
+describe package('apache2') do
+  it { should be_installed }
 end
 
-# This is an example test, replace it with your own test.
-describe port(80), :skip do
-  it { should_not be_listening }
+describe command('sudo apachectl -t') do
+  its(:exit_status) { should eq 0 }
+end
+
+describe command('sudo /etc/init.d/apache2 status') do
+  its(:stdout) { should match 'apache2 is running' }
+end
+
+describe command('ls -la /etc/apache2/sites-enabled/') do
+  its(:stdout) { should match (/.conf/) }
+end
+
+describe command('ls -la /etc/apache2/sites-available/') do
+  its(:stdout) { should match (/.conf/) }
 end

@@ -1,6 +1,6 @@
 #
 # Cookbook:: redirects
-# Recipe:: default
+# Attributes:: default
 #
 # Copyright:: 2018, Rodrigo Torres <rlinstorres@gmail.com>
 #
@@ -16,4 +16,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include_recipe 'redirects::apache'
+default['redirects']['data_bag']['name'] = 'redirects'
+default['redirects']['data_bag']['tag'] = 'redirects'
