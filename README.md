@@ -1,3 +1,5 @@
+[![Build Status](https://api.travis-ci.org/rlinstorres/redirects.svg?branch=master)](https://travis-ci.org/rlinstorres/redirects) [![License](https://img.shields.io/badge/license-Apache_2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+
 # Redirects Cookbook
 
 This cookbook provides a servers Debian/Ubuntu 16.04 or 14.04 with webserver Apache and set ups of the of URL redirects in your structure.
