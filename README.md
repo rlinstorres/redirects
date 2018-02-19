@@ -1,6 +1,6 @@
 # Redirects Cookbook
 
-This cookbook provides a servers Debian/Ubuntu 16.04 and 14.04 with webserver Apache and set ups of the of URL redirects in your structure.
+This cookbook provides a servers Debian/Ubuntu 16.04 or 14.04 with webserver Apache and set ups of the of URL redirects in your structure.
 
 ## Cookbooks:
 
