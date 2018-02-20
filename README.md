@@ -1,4 +1,4 @@
-[![Build Status](https://api.travis-ci.org/rlinstorres/redirects.svg?branch=master)](https://travis-ci.org/rlinstorres/redirects) [![License](https://img.shields.io/badge/license-Apache_2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+[![Cookbook Version](https://img.shields.io/cookbook/v/redirects.svg?style=flat)](https://supermarket.chef.io/cookbooks/redirects) [![Build Status](https://api.travis-ci.org/rlinstorres/redirects.svg?branch=master)](https://travis-ci.org/rlinstorres/redirects) [![License](https://img.shields.io/badge/license-Apache_2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 # Redirects Cookbook
 
@@ -51,6 +51,22 @@ In your data_bags directory is necessary create a directory with the name "redir
       "server_alias": "www.example.com",
       "redir": [
         "RedirectMatch 301 /(.*) http://other-example.com/"
+      ]
+    }
+  },
+  "tag": "redirects"
+}
+
+{
+  "id": "vhost-example2",
+  "_default": {
+    "example2.com": {
+      "docroot": "/var/www/html",
+      "log_level": "warn",
+      "server_admin": "email@example2.com",
+      "server_alias": "www.example2.com",
+      "redir": [
+        "RedirectMatch 301 /(.*) http://other-example2.com/$1"
       ]
     }
   },
