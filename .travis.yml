@@ -33,7 +33,7 @@ before_script:
   - cookstyle --version
   - foodcritic --version
 
-script: kitchen verify ${INSTANCE}
+script: kitchen test ${INSTANCE}
 
 matrix:
   include:
