@@ -4,7 +4,7 @@ maintainer_email 'rlinstorres@gmail.com'
 license 'Apache v2.0'
 description 'Installs/Configures redirects'
 long_description 'Installs/Configures redirects'
-version '0.1.0'
+version '1.0.1'
 chef_version '>= 12.1' if respond_to?(:chef_version)
 issues_url 'https://github.com/rlinstorres/redirects/issues'
 source_url 'https://github.com/rlinstorres/redirects'
