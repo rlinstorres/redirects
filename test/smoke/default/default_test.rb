@@ -5,16 +5,14 @@
 # The Inspec reference, with examples and extensive documentation, can be
 # found at http://inspec.io/docs/reference/resources/
 
-describe package('apache2') do
-  it { should be_installed }
+describe upstart_service('apache2') do
+ it { should be_installed }
+ it { should be_enabled }
+ it { should be_running }
 end
 
-describe command('sudo apachectl -t') do
-  its(:exit_status) { should eq 0 }
-end
-
-describe command('sudo /etc/init.d/apache2 status') do
-  its(:stdout) { should match 'apache2 is running' }
+describe port 80 do
+  it { should be_listening }
 end
 
 describe command('ls -la /etc/apache2/sites-enabled/') do
